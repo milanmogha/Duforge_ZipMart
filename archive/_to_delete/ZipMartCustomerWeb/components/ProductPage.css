@@ -1,0 +1,129 @@
+.product-page {
+    justify-content: center; /* Centers horizontally */
+    background: #ede8f5;
+    align-items: center; /* Centers vertically */
+    min-width: 100vw;
+    height: 100vh; /* Full height of the viewport */
+    padding: 24px;
+    box-sizing: border-box; /* Ensures padding is included in height */
+  }
+  .product-info{    justify-content: center; /* Centers horizontally */
+    background: #ede8f5;
+    align-items: center; /* Centers vertically */
+    max-width: 720px;
+    height: 50vh; /* Full height of the viewport */
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box; /* Ensures padding is included in height */}
+  
+  .product-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .product-images .main-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-images .thumbnails {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .product-images .thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .product-images .thumbnail:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-images .active-thumbnail {
+    border: 2px solid #3b82f6;
+  }
+  
+  .rating {
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .product-details h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .product-details .category {
+    color: #6b7280;
+    margin-bottom: 16px;
+  }
+  
+  .product-details .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product-details .original-price {
+    font-size: 1rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-left: 8px;
+  }
+  
+  .product-details .add-to-cart-button {
+    background-color: #55dd7e;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-details .add-to-cart-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .additional-info {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  .shop-info,
+  .ratings {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .shop-info h2,
+  .ratings h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .rating-item {
+    margin-top: 8px;
+  }
+  
+  .error-message {
+    color: #f87171;
+    font-weight: bold;
+  }
+  

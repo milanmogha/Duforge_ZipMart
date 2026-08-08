@@ -1,0 +1,95 @@
+name: zipmart
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: zipmart-mongo
+    restart: unless-stopped
+    volumes:
+      - zipmart_mongo_data:/data/db
+    networks: [zipmart]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    image: ghcr.io/milanmogha/zipmart-backend:latest
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    container_name: zipmart-backend
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    env_file: [./.env]
+    environment:
+      - NODE_ENV=production
+      - PORT=8000
+      - MONGO_URI=mongodb://mongo:27017/zipmart
+    volumes:
+      - ./serviceAccountKey.json:/repo/apps/backend/config/serviceAccountKey.json:ro
+    networks: [zipmart]
+    ports:
+      - "127.0.0.1:8300:8000"
+
+  admin:
+    image: ghcr.io/milanmogha/zipmart-admin:latest
+    build:
+      context: .
+      dockerfile: apps/admin-web/Dockerfile
+      args:
+        VITE_API_URL: https://api.zipmart.duforge.tech
+    container_name: zipmart-admin
+    restart: unless-stopped
+    networks: [zipmart]
+    ports:
+      - "127.0.0.1:8301:80"
+
+  customer:
+    image: ghcr.io/milanmogha/zipmart-customer:latest
+    build:
+      context: .
+      dockerfile: apps/customer-web/Dockerfile
+      args:
+        VITE_API_URL: https://api.zipmart.duforge.tech
+    container_name: zipmart-customer
+    restart: unless-stopped
+    networks: [zipmart]
+    ports:
+      - "127.0.0.1:8302:80"
+
+  shop:
+    image: ghcr.io/milanmogha/zipmart-shop:latest
+    build:
+      context: .
+      dockerfile: apps/shop-web/Dockerfile
+      args:
+        VITE_API_URL: https://api.zipmart.duforge.tech
+    container_name: zipmart-shop
+    restart: unless-stopped
+    networks: [zipmart]
+    ports:
+      - "127.0.0.1:8303:80"
+
+  delivery:
+    image: ghcr.io/milanmogha/zipmart-delivery:latest
+    build:
+      context: .
+      dockerfile: apps/delivery-web/Dockerfile
+      args:
+        VITE_API_URL: https://api.zipmart.duforge.tech
+    container_name: zipmart-delivery
+    restart: unless-stopped
+    networks: [zipmart]
+    ports:
+      - "127.0.0.1:8304:80"
+
+networks:
+  zipmart:
+    name: zipmart
+
+volumes:
+  zipmart_mongo_data: {}

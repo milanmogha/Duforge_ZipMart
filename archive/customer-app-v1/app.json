@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "ZipMart",
+    "slug": "zipmart",
+    "scheme": "zipmart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./src/assets/favicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zipmart.customer"
+    },
+    "android": {
+      "package": "com.zipmart.customer",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/favicon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "appwriteProjectId": "677178c3000b13839d0c",
+      "appwriteEndpoint": "https://cloud.appwrite.io/v1",
+      "clientId": "867286701381-1v16q0jjvq8h355s6eq3usfm89vlgi2r.apps.googleusercontent.com",
+      "androidClientId": "867286701381-0ldnplrv4bcudt59tvmlit9bhgb3m8tj.apps.googleusercontent.com",
+      "webClientId": "867286701381-1v16q0jjvq8h355s6eq3usfm89vlgi2r.apps.googleusercontent.com"
+    },
+    "owner": "antrikshx"
+  }
+}

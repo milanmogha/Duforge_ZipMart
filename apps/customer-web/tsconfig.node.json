@@ -1,0 +1,7 @@
+{
+  "extends": "@zipmart/tsconfig/vite-node.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./.cache/tsconfig.node.tsbuildinfo"
+  },
+  "include": ["vite.config.ts"]
+}

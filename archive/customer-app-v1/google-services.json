@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "867286701381",
+    "project_id": "bellybasket-6242b",
+    "storage_bucket": "bellybasket-6242b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867286701381:android:2d89d5da84e6a55315da2c",
+        "android_client_info": {
+          "package_name": "com.bellybasket.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867286701381-1v16q0jjvq8h355s6eq3usfm89vlgi2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj1wymN08mo_RLD140JRe-yEAY7AxWl3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867286701381-1v16q0jjvq8h355s6eq3usfm89vlgi2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

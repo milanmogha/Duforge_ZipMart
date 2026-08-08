@@ -1,0 +1,20 @@
+/* CategoryPage.css */
+
+/* Example of a style that might constrain width */
+.container {
+    max-width: 800px; /* If you see something like this, remove or adjust it! */
+    margin: 0 auto; 
+  }
+  
+  /* or a float layout that might push content to the side, remove it */
+  .float-container {
+    float: left;
+    width: 70%;
+  }
+  #categoryResult{
+    width: 100vw;
+  }
+
+  #categoryResult h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }

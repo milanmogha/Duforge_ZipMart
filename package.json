@@ -1,0 +1,31 @@
+{
+  "name": "zipmart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZipMart monorepo — backend API and web clients",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev:backend": "npm run dev -w apps/backend",
+    "dev:admin": "npm run dev -w apps/admin-web",
+    "dev:customer": "npm run dev -w apps/customer-web",
+    "dev:shop": "npm run dev -w apps/shop-web",
+    "dev:delivery": "npm run dev -w apps/delivery-web",
+    "dev": "concurrently -n backend,admin,customer,shop,delivery -c blue,magenta,green,yellow,cyan \"npm:dev:backend\" \"npm:dev:admin\" \"npm:dev:customer\" \"npm:dev:shop\" \"npm:dev:delivery\"",
+    "dev:web": "concurrently -n admin,customer,shop,delivery -c magenta,green,yellow,cyan \"npm:dev:admin\" \"npm:dev:customer\" \"npm:dev:shop\" \"npm:dev:delivery\"",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "rimraf \"apps/*/node_modules\" \"packages/*/node_modules\" \"apps/*/dist\" node_modules",
+    "start": "npm run start -w apps/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "rimraf": "^6.0.1"
+  }
+}

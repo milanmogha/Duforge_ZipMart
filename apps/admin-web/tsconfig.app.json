@@ -1,0 +1,7 @@
+{
+  "extends": "@zipmart/tsconfig/vite-app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./.cache/tsconfig.app.tsbuildinfo"
+  },
+  "include": ["src"]
+}

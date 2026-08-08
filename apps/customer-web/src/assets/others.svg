@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+
+  <defs>
+    <linearGradient id="g-others" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0F1F1"/>
+      <stop offset="1" stop-color="#D8DADA"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#g-others)"/>
+  <!-- arch badge -->
+  <path d="M64 228 L64 120 Q64 44 128 44 Q192 44 192 120 L192 228 Z" fill="#ffffff" opacity=".55"/>
+  <!-- sparkles -->
+  <circle cx="40" cy="44" r="6" fill="#ffffff" opacity=".7"/>
+  <circle cx="216" cy="64" r="4" fill="#ffffff" opacity=".6"/>
+  <circle cx="214" cy="210" r="5" fill="#ffffff" opacity=".55"/>
+  <circle cx="42" cy="200" r="4" fill="#ffffff" opacity=".5"/>
+  
+    <g transform="translate(128 136)">
+      <path d="M-40 -18 L-30 34 L30 34 L40 -18 Z" fill="#e8a33d" stroke="#1f2a24" stroke-width="3"/>
+      <path d="M-34 -18 Q-34 -38 0 -38 Q34 -38 34 -18" fill="none" stroke="#1f2a24" stroke-width="3"/>
+      <path d="M-20 -18 Q-20 -6 0 -6 Q20 -6 20 -18" fill="none" stroke="#1f2a24" stroke-width="3"/>
+      <circle cx="-8" cy="-30" r="3" fill="#1f2a24"/>
+      <circle cx="8" cy="-32" r="3" fill="#1f2a24"/>
+    </g>
+</svg>

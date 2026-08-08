@@ -1,0 +1,26 @@
+{
+  "name": "@zipmart/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared config, socket helpers and domain types for ZipMart clients",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts",
+    "./config": "./src/config.ts",
+    "./socket": "./src/socket.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@zipmart/tsconfig": "*",
+    "socket.io-client": "^4.8.1",
+    "typescript": "~5.6.2"
+  }
+}

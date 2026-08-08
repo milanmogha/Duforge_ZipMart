@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+
+  <defs>
+    <linearGradient id="g-noodles-pasta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EDF8ED"/>
+      <stop offset="1" stop-color="#D3ECD3"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#g-noodles-pasta)"/>
+  <!-- arch badge -->
+  <path d="M64 228 L64 120 Q64 44 128 44 Q192 44 192 120 L192 228 Z" fill="#ffffff" opacity=".55"/>
+  <!-- sparkles -->
+  <circle cx="40" cy="44" r="6" fill="#ffffff" opacity=".7"/>
+  <circle cx="216" cy="64" r="4" fill="#ffffff" opacity=".6"/>
+  <circle cx="214" cy="210" r="5" fill="#ffffff" opacity=".55"/>
+  <circle cx="42" cy="200" r="4" fill="#ffffff" opacity=".5"/>
+  
+    <g transform="translate(128 138)">
+      <ellipse cx="0" cy="14" rx="52" ry="18" fill="#fff" stroke="#1f2a24" stroke-width="3"/>
+      <path d="M-52 14 Q-46 -28 0 -28 Q46 -28 52 14 Z" fill="#f7e7cd" stroke="#1f2a24" stroke-width="3"/>
+      <path d="M-28 2 Q-12 -10 4 2 M-14 10 Q2 -2 18 10 M30 0 Q36 -6 42 2" stroke="#e8a33d" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M0 -28 L0 14 M-26 4 L26 4" stroke="#fff" stroke-width="2" opacity=".5"/>
+    </g>
+</svg>

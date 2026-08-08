@@ -1,0 +1,130 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f3f4f6; /* Light background for a clean look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+  }
+  
+  .chat-header {
+    background-color: #4ac76f; /* A soft green header */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for messages */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .chat-message {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .chat-message-bot {
+    justify-content: flex-start;
+  }
+  
+  .chat-message-user {
+    justify-content: flex-end;
+  }
+  
+  .chat-message-text {
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #4ac76f; /* Green for bot messages */
+    color: white;
+    font-size: 1rem;
+    word-wrap: break-word;
+  }
+  
+  .chat-message-user .chat-message-text {
+    background-color: #e3e4e8; /* Light gray for user messages */
+    color: black;
+  }
+  
+  .chat-faq {
+    padding: 1rem;
+    background-color: #f9fafb; /* Light gray background */
+    border-top: 1px solid #ddd;
+  }
+  
+  .faq-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .chat-faq ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chat-faq li {
+    cursor: pointer;
+    color: #007bff; /* Blue for clickable FAQ items */
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .chat-faq li:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .chat-faq .faq-connect {
+    color: #e53e3e; /* Red for the "Connect to support" item */
+    font-weight: bold;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9fafb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-input:focus {
+    outline: none;
+    border-color: #4ac76f;
+  }
+  
+  .chat-send-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4ac76f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-send-button:hover {
+    background-color: #3a9f57; /* Darker green on hover */
+  }
+  

@@ -1,0 +1,41 @@
+/* Main App Container.
+   The desktop sidebar is position:fixed and the mobile bars are sticky/fixed,
+   so this must stack in normal flow — a flex row would lay the mobile top bar
+   out *beside* the content and push the page into horizontal overflow. */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Content Styling */
+.content {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+/* The Navbar renders a fixed sidebar only at >= 900px (md-portal).
+   Match that margin here, and drop it below 900px where the Navbar
+   switches to the mobile top bar + drawer. */
+.content.with-sidebar {
+  margin-left: 256px; /* Sidebar width (w-64) */
+}
+
+@media (max-width: 899px) {
+  .content.with-sidebar {
+    margin-left: 0;
+    /* Clear the fixed bottom tab bar (h-16) + the raised action button. */
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Remove sidebar margin in iframe mode */
+.iframe-mode .content {
+  margin-left: 0 !important;
+  width: 100%;
+}
+
+/* Hide sidebar in iframe mode */
+.iframe-mode .sidebar {
+  display: none;
+}

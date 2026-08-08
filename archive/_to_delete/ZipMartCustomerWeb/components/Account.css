@@ -1,0 +1,116 @@
+/* General Layout */
+.account-container {
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f9fafb;
+}
+
+/* For medium and larger screens, switch to row layout */
+@media (min-width: 768px) {
+  .account-container {
+    flex-direction: row;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  border-right: 2px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+/* Show sidebar on large screens */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scrollable Content Area */
+.content-area {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  padding-bottom: 80px; /* leave space for bottom navbar */
+}
+
+/* Login Prompt */
+.login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+.login-prompt h2 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-prompt button {
+  background-color: #4ac76f;
+  color: white;
+  font-size: 1.125rem; /* 18px */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.login-prompt button:hover {
+  background-color: #187c36;
+  transform: scale(1.05);
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 50;
+}
+
+/* Additional responsive tweaks (if needed) */
+@media (max-width: 767px) {
+  /* On mobile, sidebar remains hidden and content takes full width */
+  .sidebar {
+    display: none;
+  }
+  .content-area {
+    padding: 12px;
+  }
+  .login-prompt h2 {
+    font-size: 1.3rem;
+  }
+  .login-prompt button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

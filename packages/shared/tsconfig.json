@@ -1,0 +1,4 @@
+{
+  "extends": "@zipmart/tsconfig/vite-app.json",
+  "include": ["src"]
+}

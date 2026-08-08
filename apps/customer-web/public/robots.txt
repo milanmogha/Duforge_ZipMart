@@ -1,0 +1,9 @@
+# robots.txt for BellyBasket Store
+User-agent: *
+Disallow: /admin/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /payment
+
+Sitemap: https://bellybasketstore.in/sitemap.xml
+Crawl-delay: 5

@@ -1,0 +1,51 @@
+.about-container {
+  max-width:100vw;
+    margin: 150px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4ac76f;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .contact-section a {
+    color: #187c36;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+  

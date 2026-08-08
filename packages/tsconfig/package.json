@@ -1,0 +1,11 @@
+{
+  "name": "@zipmart/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared TypeScript configuration bases for ZipMart apps",
+  "files": [
+    "base.json",
+    "vite-app.json",
+    "vite-node.json"
+  ]
+}
