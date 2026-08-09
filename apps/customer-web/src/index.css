@@ -43,7 +43,7 @@
 
 /* Arch-topped image frame (like a market produce stamp) */
 .arch-frame {
-  border-radius: 9999px 9999px 1.25rem 1.25rem;
+  border-radius: 1.5rem 1.5rem 1.25rem 1.25rem;
 }
 
 /* Rotated sticker-style badge */
