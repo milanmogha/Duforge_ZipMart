@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Screens and Components
-import WelcomeScreen from "./components/WelcomeScreen";
+import SplashScreen from "./components/SplashScreen";
 import SignIn from "./components/Login";
 import VerifyOtp from "./components/VerifyOtp";
 import LandingPage from "./components/HomePage";
@@ -96,6 +96,9 @@ const GlobalSocketListener: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const [showSplash, setShowSplash] = React.useState(true);
+  if (showSplash) return <SplashScreen onDone={() => setShowSplash(false)} />;
+
   return (
     <HelmetProvider>
       <AuthProvider>
@@ -135,7 +138,7 @@ const App: React.FC = () => {
             <GlobalSocketListener />
             <Routes>
               {/* Public Routes */}
-              <Route path="/" element={<WelcomeScreen />} />
+              <Route path="/" element={<LandingPage />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/verify-otp" element={<VerifyOtp />} />
               <Route path="/landing" element={<LandingPage />} />
